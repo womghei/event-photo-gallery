@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "event-photo-gallery",
+  "main": "src/index.js",
+  "compatibility_date": "2025-08-01",
+  "vars": {
+    "ORIGIN_URL": "https://womghei.github.io/event-photo-gallery",
+    "AUTH_USER": "gallery"
+  }
+}

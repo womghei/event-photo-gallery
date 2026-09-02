@@ -7,19 +7,37 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="utility-bar">
+    <div class="container utility-row">
+      <span>Private gallery access</span>
+      <span class="utility-note">Authorized viewers only</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-row">
-      <div>
-        <h1>Event Photo Gallery</h1>
-        <p class="subtitle">Browse and download photos from the event</p>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <p class="brand-label">Commercial Banking</p>
+          <h1>Event Photo Gallery</h1>
+        </div>
       </div>
-      <a class="btn btn-primary btn-download-all" href="https://github.com/womghei/event-photo-gallery/releases/latest/download/all-event-photos.zip" download="all-event-photos.zip">
+      <a class="btn btn-primary btn-download-all" href="/release/all-event-photos.zip" download="all-event-photos.zip">
         Download all photos (ZIP)
       </a>
     </div>
   </header>
 
-  <main class="container">
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Event photography</p>
+      <h2>Browse and download official event photos</h2>
+      <p class="hero-copy">Select an album below to preview images or download individual files and ZIP archives.</p>
+    </div>
+  </section>
+
+  <main class="container main-content">
     <nav class="album-tabs" id="album-tabs" aria-label="Photo albums"></nav>
     <section class="album-info" id="album-info"></section>
     <div class="gallery" id="gallery" role="list"></div>
@@ -35,8 +53,9 @@
   </dialog>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-row">
       <p>Click any photo to preview. Use the download button to save the original file.</p>
+      <p class="footer-note">Protected gallery</p>
     </div>
   </footer>
 

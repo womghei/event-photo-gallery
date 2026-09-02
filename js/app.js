@@ -14,8 +14,7 @@ function photoUrl(folder, filename) {
   return `photos/${folder}/${encodeURIComponent(filename)}`;
 }
 
-const DOWNLOAD_BASE =
-  "https://github.com/womghei/event-photo-gallery/releases/latest/download";
+const DOWNLOAD_BASE = "/release";
 
 function albumZipUrl(albumId) {
   return `${DOWNLOAD_BASE}/${albumId}.zip`;
