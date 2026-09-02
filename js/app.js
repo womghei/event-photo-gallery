@@ -14,10 +14,25 @@ function photoUrl(folder, filename) {
   return `photos/${folder}/${encodeURIComponent(filename)}`;
 }
 
+const DOWNLOAD_BASE =
+  "https://github.com/womghei/event-photo-gallery/releases/latest/download";
+
+function albumZipUrl(albumId) {
+  return `${DOWNLOAD_BASE}/${albumId}.zip`;
+}
+
 function renderAlbumInfo(album) {
+  const count = manifest.photos[album.id].length;
   albumInfoEl.innerHTML = `
-    <h2>${album.title}</h2>
-    <p>${album.description} · ${manifest.photos[album.id].length} photo(s)</p>
+    <div class="album-info-row">
+      <div>
+        <h2>${album.title}</h2>
+        <p>${album.description} · ${count} photo(s)</p>
+      </div>
+      <a class="btn btn-secondary" href="${albumZipUrl(album.id)}" download="${album.id}.zip">
+        Download album (ZIP)
+      </a>
+    </div>
   `;
 }
 

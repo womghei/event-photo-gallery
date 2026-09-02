@@ -35,6 +35,20 @@ body {
   padding: 2rem 0 1.5rem;
 }
 
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-download-all {
+  white-space: nowrap;
+  padding: 0.7rem 1.15rem;
+  font-weight: 600;
+}
+
 .site-header h1 {
   margin: 0 0 0.35rem;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
@@ -78,6 +92,14 @@ body {
 
 .album-info {
   margin-bottom: 1.5rem;
+}
+
+.album-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .album-info h2 {
@@ -155,6 +177,16 @@ body {
 
 .btn-primary:hover {
   background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: #edf2f7;
 }
 
 .lightbox {
