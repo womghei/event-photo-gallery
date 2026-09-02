@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Photo Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Event Photo Gallery</h1>
+      <p class="subtitle">Browse and download photos from the event</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="album-tabs" id="album-tabs" aria-label="Photo albums"></nav>
+    <section class="album-info" id="album-info"></section>
+    <div class="gallery" id="gallery" role="list"></div>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close preview">&times;</button>
+    <figure class="lightbox-content">
+      <img id="lightbox-image" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <a class="btn btn-primary lightbox-download" id="lightbox-download" download>Download full size</a>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Click any photo to preview. Use the download button to save the original file.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

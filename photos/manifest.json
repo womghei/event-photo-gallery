@@ -1,0 +1,30 @@
+{
+  "albums": [
+    {
+      "id": "all-photos",
+      "title": "All Photos",
+      "description": "Full event photo collection",
+      "folder": "all-photos"
+    },
+    {
+      "id": "presentation",
+      "title": "Presentation & Awards",
+      "description": "Winners, awards presentation, and management photos",
+      "folder": "presentation"
+    }
+  ],
+  "photos": {
+    "all-photos": [
+      "KM_260828_KMA00378.jpg",
+      "KM_260828_KMA00385.jpg",
+      "KM_260828_KMA00416.jpg",
+      "KM_260828_KMA00422.jpg"
+    ],
+    "presentation": [
+      "KM_260828_KMA00863.jpg",
+      "KM_260828_KMA00886.jpg",
+      "KM_260828_KMA01887.jpg",
+      "KM_260828_KMA01905.jpg"
+    ]
+  }
+}
