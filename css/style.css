@@ -334,6 +334,10 @@ body {
   color: rgba(255, 255, 255, 0.55);
 }
 
+.video-download-card {
+  margin-top: 2rem;
+}
+
 @media (max-width: 600px) {
   .utility-row,
   .footer-row {
