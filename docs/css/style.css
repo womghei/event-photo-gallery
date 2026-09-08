@@ -1,0 +1,351 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --hsbc-red: #db0011;
+  --hsbc-red-dark: #a6000d;
+  --text: #333333;
+  --text-muted: #666666;
+  --text-light: #ffffff;
+  --bg: #f3f3f3;
+  --surface: #ffffff;
+  --border: #d7d7d7;
+  --hero-bg: #252525;
+  --footer-bg: #333333;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --font: "Univers Next", Univers, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1180px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.utility-bar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8125rem;
+}
+
+.utility-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  color: var(--text-muted);
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  background:
+    linear-gradient(to bottom right, transparent 49%, var(--hsbc-red) 50%) top left / 50% 50% no-repeat,
+    linear-gradient(to bottom left, transparent 49%, var(--hsbc-red) 50%) top right / 50% 50% no-repeat,
+    linear-gradient(to top right, transparent 49%, var(--hsbc-red) 50%) bottom left / 50% 50% no-repeat,
+    linear-gradient(to top left, transparent 49%, var(--hsbc-red) 50%) bottom right / 50% 50% no-repeat;
+  flex-shrink: 0;
+}
+
+.brand-label {
+  margin: 0 0 0.15rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.page-hero {
+  background: var(--hero-bg);
+  color: var(--text-light);
+  padding: 2.5rem 0;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-hero h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 4vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-copy {
+  margin: 0;
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.main-content {
+  padding-bottom: 3rem;
+}
+
+.album-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 2rem 0 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  appearance: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--text);
+  padding: 0.85rem 1.25rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: var(--hsbc-red);
+}
+
+.tab-btn.active {
+  color: var(--hsbc-red);
+  border-bottom-color: var(--hsbc-red);
+}
+
+.album-info {
+  margin: 1.5rem 0;
+}
+
+.album-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.album-info h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.album-info p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.photo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.photo-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  padding: 0;
+  background: #e8e8e8;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-meta {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.photo-name {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.625rem 1rem;
+  border-radius: 0;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-primary {
+  background: var(--hsbc-red);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: var(--hsbc-red-dark);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--hsbc-red);
+  border-color: var(--hsbc-red);
+}
+
+.btn-secondary:hover {
+  background: #fff5f5;
+}
+
+.btn-download-all {
+  white-space: nowrap;
+}
+
+.lightbox {
+  position: relative;
+  width: min(95vw, 1100px);
+  max-height: 95vh;
+  padding: 0;
+  border: none;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  margin: 0;
+}
+
+.lightbox-content img {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #111;
+}
+
+.lightbox-content figcaption {
+  padding: 0.85rem 1rem 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.lightbox-download {
+  margin: 1rem;
+}
+
+.site-footer {
+  background: var(--footer-bg);
+  color: rgba(255, 255, 255, 0.82);
+  padding: 1.5rem 0 2rem;
+  font-size: 0.875rem;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-note {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 600px) {
+  .utility-row,
+  .footer-row {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.85rem;
+  }
+
+  .tab-btn {
+    padding: 0.75rem 0.9rem;
+  }
+}
